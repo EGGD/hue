@@ -1,0 +1,30 @@
+#color{
+    background: url(/images/col_bg.png) no-repeat;
+    text-align: -webkit-match-parent;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: auto;
+    text-decoration: underline;
+}
+#color div{
+    height: 10px;
+    width: 50px;
+    background: blue;
+}
+#color a{
+    background: transparent;
+    display: block;
+    overflow: hidden;
+    font-size: 1px;
+    width: 50px;
+    height: 278px;
+    writing-mode:tb-rl;
+    background-color: #FFF;
+    -webkit-transition: background-color 0.15s linear;
+    -webkit-mask-image: url(/images/col.png);
+    -webkit-mask-repeat: no-repeat;
+}
+#color a label{
+    margin-bottom: 100px;
+}
