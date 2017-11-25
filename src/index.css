@@ -205,8 +205,8 @@ body,html {
             transform: translate3d(0, 0, 0);
   }
   50% {
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, -200%, 0);
+            transform: translate3d(0, -200%, 0);
   }
   51% {
     -webkit-transform: translate3d(0, 50%, 0);
