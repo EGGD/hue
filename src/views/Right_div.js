@@ -82,9 +82,6 @@ class Right_div extends Component {
             color:this.state.rightColor,
             borderColor:this.state.rightColor,
         }
-        var hrStyle={
-            borderWidth: '0.5px'                        
-        }
         return (
             <div>
                 <div className="rightColor" style={rightColor}>
