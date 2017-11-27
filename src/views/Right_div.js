@@ -1,6 +1,5 @@
 //环形图js
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import createjs from 'createjs-cmd';
 import clipboard from 'clipboard-js';
 import '../index.css';
@@ -81,7 +80,10 @@ class Right_div extends Component {
     render() {
         var rightColor={
             color:this.state.rightColor,
-            borderColor:this.state.rightColor
+            borderColor:this.state.rightColor,
+        }
+        var hrStyle={
+            borderWidth: '0.5px'                        
         }
         return (
             <div>
@@ -123,7 +125,7 @@ class Right_div extends Component {
                     <div id="content__container">
                         <span id="lrtop">{this.props.data.chinese}</span>
                         <div id="rightPinyin">{this.props.data.pinin}</div>
-                        <hr style={rightColor} />
+                        <hr style={rightColor} className="hrStyle" />
                         <div className="tooltip">
                             <span className=" titleTips Colortips">点击复制数据</span>
                             <span id="rightColorTitle" onClick={this.onColorTextCopy.bind(this, this.props.data.colorText)}>

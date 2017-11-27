@@ -1,10 +1,8 @@
 //环形图js
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 //https://www.npmjs.com/package/createjs-cmd createjs如何在es6当中使用
 import createjs from 'createjs-cmd';
 import '../css/Ring_Diagram.css';
-var _tempTimer, rightBgAnimation, rightTextAnimation;
 class Ring_Diagram extends Component {
   constructor(props) {
     super(props);
@@ -84,7 +82,7 @@ class Ring_Diagram extends Component {
     function handleTick(event) {
       stage.update();
     };
-    if (callback == 'function') {
+    if (callback === 'function') {
       callback()
     }
   };

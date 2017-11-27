@@ -9,6 +9,9 @@ body,html {
   display: flex;
   justify-content: center;
 }
+.hrStyle{
+  border-width: 0.5px;
+}
 /* 设置滚条式 */::-webkit-scrollbar {    width: 0px;}
 /* 滚槽 */::-webkit-scrollbar-track {    -webkit-box-shadow: inset 0 0 6px rgb(255, 255, 255); border-radius: 10px;}
 /* 滚条滑块 */::-webkit-scrollbar-thumb {    border-radius: 10px;    background: rgb(143, 143, 143);  
@@ -47,7 +50,6 @@ body,html {
   text-align: center;
   z-index: 2;
   position: relative;
-  top: -20%;
   left: 20%;
   width: 150px;
   height: 50%;

@@ -1,11 +1,8 @@
 //环形图js
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Ring_Diagram from './Ring_Diagram';
+import Ring_Diagram from './Ring_Diagram.js';
 import Right_div from './Right_div';
-import clipboard from 'clipboard-js';
-import $ from 'jquery';
-var oldData,rightBgAnimation;
 class Left_div extends Component {
     constructor(props) {
         super(props);
@@ -48,13 +45,13 @@ class Left_div extends Component {
 
     render() {
         let listdata = this.state.colorData.map((value, index) => {
-            if (index == this.state.colorData.length - 1) {
+            if (index === this.state.colorData.length - 1) {
                 return (
-                    <Ring_Diagram default={value} handleEmail={this.handleEmail.bind(this)} setTimeoutId={index} key={index} tf={true} />
+                    <Ring_Diagram default={value} handleEmail={this.handleEmail.bind(this)} setTimeoutId={index} key={value.id} tf={true} />
                 );
             } else {
                 return (
-                    <Ring_Diagram default={value} handleEmail={this.handleEmail.bind(this)} setTimeoutId={index} key={index} tf={false} />
+                    <Ring_Diagram default={value} handleEmail={this.handleEmail.bind(this)} setTimeoutId={index} key={value.id} tf={false} />
                 );
             }
         });
