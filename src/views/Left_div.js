@@ -27,10 +27,8 @@ class Left_div extends Component {
         };
     };
     handleEmail(val) {
-        ReactDOM.unmountComponentAtNode(document.getElementById("right"));
         ReactDOM.render(<Right_div data={val} />, document.getElementById('right'));
         document.getElementById('content__container__list').className='rightText content__container content__container__list'
-        
         setTimeout(function(){
             document.getElementById('content__container__list').className='rightText'
         },800)

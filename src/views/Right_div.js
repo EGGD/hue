@@ -6,22 +6,24 @@ import '../index.css';
 class Right_div extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            colorData:this.props.data,
-            rightColor:'white'
+        this.state = {
+            colorData: this.props.data,
+            rightColor: 'white'
         }
     };
     componentDidMount() {
         this.onSetRightCMYK(this.props.data);
     }
-
+    componentDidUpdate(){
+        this.onSetRightCMYK(this.props.data);        
+    }
     //cmyk圈的颜色设置
     onSetRightCMYK(data, color) {
         var color = 'white';
         if (data.R > 200) {
-            color='black';
+            color = 'black';
             this.setState({
-                rightColor:color
+                rightColor: color
             })
         };
         this.setCMYK(data.C, "C", color);
@@ -71,16 +73,16 @@ class Right_div extends Component {
         document.getElementsByClassName("Title")[0].innerText = "点击复制数据";
     }
     onColorRGBCopy(data) {
-        var obj= 'rgb('+data.R+','+data.G+','+data.B+')';
+        var obj = 'rgb(' + data.R + ',' + data.G + ',' + data.B + ')';
         document.getElementsByClassName("Title")[0].innerText = "已复制到剪贴板";
         clipboard.copy(obj);
         document.getElementsByClassName("Colortips")[0].innerText = "点击复制数据";
     }
 
     render() {
-        var rightColor={
-            color:this.state.rightColor,
-            borderColor:this.state.rightColor,
+        var rightColor = {
+            color: this.state.rightColor,
+            borderColor: this.state.rightColor,
         }
         return (
             <div>
@@ -131,7 +133,7 @@ class Right_div extends Component {
                         </div>
                         <div className="tooltips">
                             <span className=" titleTips Title">点击复制数据</span>
-                            <span id="rightRGB" onClick={this.onColorRGBCopy.bind(this,this.props.data)}>
+                            <span id="rightRGB" onClick={this.onColorRGBCopy.bind(this, this.props.data)}>
                                 rgb({this.props.data.R},{this.props.data.G},{this.props.data.B})
                             </span>
                         </div>
