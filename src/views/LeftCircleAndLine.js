@@ -8,29 +8,26 @@ class LeftCircleAndLine extends Component {
         super(props);
         this.state = {
             colorData: this.props.data,
-            textColor:'white',
+            textColor: 'white',
         };
     };
     setRightCircleAndTextData(data) {
+        //重新绘制右侧内容 传递点击参数
         ReactDOM.render(<RightCircleAndText data={data} />, document.getElementById('right'));
         document.getElementById('content__container__list').className = 'rightText content__container content__container__list'
         setTimeout(function () {
             document.getElementById('content__container__list').className = 'rightText'
         }, 800);
+        //设置背景色
         document.getElementsByTagName("body")[0].style.background = data.colorText;
-        let textColor=this.state.textColor;
-        if(data.R>200){
-            textColor='black';
-        }else{
-            textColor='white';
-        }
+        let textColor = this.state.textColor;
+        //判断R的值是否大于200 是的画就换线条和圆的颜色
+        data.R > 200 ? textColor = 'black' : textColor = 'white';
         this.setState({
-            textColor:textColor
+            textColor: textColor
         });
     };
     render() {
-        // id: 60, number: "060", chinese: "品红", pinin: "pinhong", colorText: "#a71368",
-        // RGBCMYK
         let listdata = this.state.colorData.map((value, index) => {
             return <CircleAndLine key={index}
                 svgTextColor={value.colorText}

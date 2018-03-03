@@ -51,11 +51,13 @@ class CircleAndLine extends Component {
     };
   }
   componentDidMount() {
+    //初始化所有的内容
     this.svgInit();
   }
   componentWillUnmount() {
     // clearTimeout(initSvgNumberSetTime);
   }
+  //父组件传递参数到子组件的时候 使用这个参数 但是会出现信息滞后的问题 所以要延迟一点时间调用
   componentWillReceiveProps(){
     setTimeout(() => {
       this.svgInit();
@@ -108,7 +110,12 @@ class CircleAndLine extends Component {
           <text fill={svgCircleColor} transform="matrix(0 0.9035 -1 0 25.7374 172.7432)">{svgTextColor}</text>
         </g>
         <g id="line">
-          {/* R */}
+          {/* R  */}
+          {/* stroke 填充的颜色
+          strokeWidth 线条的宽度
+          svgCircleOpacity 圈的颜色
+          strokeLinecap 线条边缘样式 
+          fill 可以设置动画执行完就停止*/}
           <g>
             <line stroke="#fff" strokeWidth={3} opacity={svgCircleOpacity} x1="45" y1="171.4" x2="45" y2="293" strokeLinecap="round" />
             <line strokeDasharray="121" stroke={svgCircleColor} strokeWidth={3} x1="45" y1="171.4" x2="45" y2="293" strokeLinecap="round" />

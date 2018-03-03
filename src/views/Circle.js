@@ -56,6 +56,7 @@ class Circle extends Component {
     if (fillValue === unFillValue) {
       return;
     };
+    //计算两个数据是否相同 不相同就添加或者减少
     if (fillValue > unFillValue) {
       setFillValue = Math.max(unFillValue, fillValue - 1);
     } else {
@@ -86,7 +87,6 @@ class Circle extends Component {
           <text x="50%" y="50%" style={{ textAnchor: "middle", dominantBaseline: "middle", fill: svgTextColor }}>{255-svgCircleOneFillValue}</text>                    
           <circle strokeWidth={svgCircleLineWidth} opacity={svgCircleOpacity} cx="50%" cy="50%" r="40.65" fill="none" stroke="#fff"  strokeLinecap="round" />
           <circle stroke={svgCircleColor} strokeWidth={svgCircleLineWidth} strokeDashoffset={svgCircleOneFillValue}  transform="rotate(-90, 50 50)" cx="50%" cy="50%" r="40.65" fill="none"  strokeDasharray="255"  strokeLinecap="round" />
-          {/* <animate className="circle" attributeName="stroke-dashoffset" begin="0s" from="255" to={svgCircleOneFillValue} dur="3s" fill="freeze" />           */}
         </svg>
       </div>
     );
