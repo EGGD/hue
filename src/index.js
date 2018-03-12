@@ -8,8 +8,11 @@ import './index.css';
 import LeftCircleAndLine from './views/LeftCircleAndLine';
 import RightCircleAndText from './views/RightCircleAndText';
 
-fetch('http://fengyitong.name:8090/api/color/getcolor').then(res => {
-    res.json().then(data => {
+// fetch('http://fengyitong.name:8090/api/color/getcolor').then(res => {
+// fetch('http://liketheeggs.club:3020/getColor').then(res => {
+fetch('http://118.24.62.236:3020/getColor').then(res => {
+    res.json().then(getData => {
+        let data=getData.list;
         // ReactDOM.render(<Left_div data={data} />, document.getElementById('left'));
         // ReactDOM.render(<Right_div  data={data[0]}/>, document.getElementById('right'));
         ReactDOM.render(<LeftCircleAndLine data={data} />, document.getElementById('left'));

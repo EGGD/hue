@@ -1,0 +1,73 @@
+{
+  "sftp://118.24.62.236:22@ubuntu": {
+    "www": {
+      "web": {
+        "hue": {
+          "build": {
+            "service-worker.js": {
+              "type": "-",
+              "size": 3152,
+              "lmtime": 1520604050000,
+              "modified": false
+            },
+            "manifest.json": {
+              "type": "-",
+              "size": 296,
+              "lmtime": 1520604044000,
+              "modified": false
+            },
+            "index.html": {
+              "type": "-",
+              "size": 433,
+              "lmtime": 1520604069000,
+              "modified": false
+            },
+            "favicon.ico": {
+              "type": "-",
+              "size": 3870,
+              "lmtime": 1520604044000,
+              "modified": false
+            },
+            "asset-manifest.json": {
+              "type": "-",
+              "size": 196,
+              "lmtime": 1520604050000,
+              "modified": false
+            },
+            "static": {
+              "css": {
+                "main.2fe28de2.css": {
+                  "type": "-",
+                  "size": 12444,
+                  "lmtime": 1520604050000,
+                  "modified": false
+                },
+                "main.2fe28de2.css.map": {
+                  "type": "-",
+                  "size": 7401,
+                  "lmtime": 1520604050000,
+                  "modified": false
+                }
+              },
+              "js": {
+                "main.1c4f0651.js": {
+                  "type": "-",
+                  "size": 153070,
+                  "lmtime": 1520604050000,
+                  "modified": false
+                },
+                "main.1c4f0651.js.map": {
+                  "type": "-",
+                  "size": 636712,
+                  "lmtime": 1520604050000,
+                  "modified": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$version": 1
+}
