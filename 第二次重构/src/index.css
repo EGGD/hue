@@ -7,7 +7,7 @@ body,html {
   color: white;
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .hrStyle{
   border-width: 0.5px;
@@ -219,34 +219,25 @@ body,html {
   }
 }
 .anim-shape {
-/* transform-origin: 150x 0px;
-transform: scale(1, 0); */
-  animation: moving-panel 5s 1 forwards;
-  position: absolute;
-  top:-50%;
-  left: 20%;
-  clip:rect(0px 100px 0px 0px);
+  animation: moving-panel 2s 1 forwards;
 }
 .anim-shape-mo{
-  position: absolute;
-  top:-50%;
-  left: 20%;
-  animation: moving-panel-mo 5s 1 forwards;
+  animation: moving-panel-mo 2s 1 forwards;
 }
 
 @keyframes moving-panel {
   0% {
-    clip:rect(0px 100px 0px 0px);
+    opacity: 0;
   }
   100% {
-    clip:rect(0px 100px 250px 0px);
+    opacity: 1;
   }
 }
 @keyframes moving-panel-mo {
   0% {
-    clip:rect(0px 100px 0px 0px);
+    opacity: 0;
   }
   100% {
-    clip:rect(0px 100px 250px 0px);
+    opacity: 1;
   }
 }

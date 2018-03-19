@@ -1,5 +1,5 @@
 import { createAction } from 'redux-actions';
-const webApi = 'http://localhost:3020/';
+const webApi = 'http://118.24.62.236:3020/';
 const fetchHeader = {
   method: "POST",
   mode: 'cors',

@@ -17,7 +17,7 @@ class RightCircleAndText extends Component {
     };
     componentDidUpdate() {
         // console.log(this.props.data);
-        let textClassName = document.getElementById("lrtop");
+        let textClassName = document.getElementById("rightText");
         if (textClassName.className === "anim-shape-mo")
             textClassName.className = "anim-shape"
         else
@@ -67,7 +67,7 @@ class RightCircleAndText extends Component {
                         <label id="G">{this.props.data.G}</label>
                         <dt className="b altText" style={rightColor}>B</dt>
                         <label id="B">{this.props.data.B}</label>
-                        <dt className="b altText"></dt>
+                        <dt className="b altText" style={rightColor}></dt>
                     </dl>
                 </div>
             )]
@@ -77,8 +77,11 @@ class RightCircleAndText extends Component {
             <div id="right" className="right">
                 {showRight}
                 <div className="rightText" style={rightColor}>
-                    <div>
-                        <span id="lrtop" className="anim-shape">
+                    <div id="rightText">
+                        {/* <span id="lrtop" className="anim-shape">
+                            {this.props.data.chinese}
+                        </span> */}
+                        <span id="lrtop">
                             {this.props.data.chinese}
                         </span>
                         <div id="rightPinyin">{this.props.data.pinin}</div>
