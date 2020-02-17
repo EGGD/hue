@@ -9,7 +9,7 @@
 * 展示颜色渐变及动画效果
 
 ### Hue如何使用？
-[http://color.fengyitong.name/](http://color.fengyitong.name/)<br />
+[http://118.24.62.236:3021/](http://118.24.62.236:3021/)<br />
 点击上面的网站 左侧为颜色库 右侧为数据展示栏
   * `CMYK`为颜色的CMYk颜色
   * `RGB`为颜色的RGB颜色

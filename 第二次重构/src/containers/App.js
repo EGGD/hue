@@ -11,8 +11,9 @@ class App extends Component {
     let stylebackg = {
       backgroundColor: this.props.colorText,
       // backgroundImage: `url(${texture})`,
-      WebkitTransition:'background-color 1.5s linear',
-      display: "flex"
+      WebkitTransition: 'background-color 1.5s linear',
+      display: "flex",
+      height: "100%"
     }
     return (
       <div style={stylebackg}>
