@@ -19,7 +19,7 @@
             "type": "node",
             "request": "launch",
             "name": "启动程序",
-            "program": "${workspaceFolder}/myapp/bin/www"
+            "program": "${workspaceFolder}/myapp/bin/color"
         }
     ]
 }

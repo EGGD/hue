@@ -1,0 +1,7 @@
+[0mGET /getColor [36m304 [0m20.795 ms - -[0m
+error: Forever detected script was killed by signal: SIGKILL
+[0mGET /getColor [36m304 [0m21.573 ms - -[0m
+[0mGET / [32m200 [0m221.111 ms - 203[0m
+[0mGET /favicon.ico [33m404 [0m17.352 ms - 1035[0m
+[0mGET /getColor [32m200 [0m8.458 ms - 16597[0m
+error: Forever detected script was killed by signal: SIGKILL

@@ -23,7 +23,7 @@ router.get('/', function (req, res, next) {
     pool.getConnection(function(err,connection){
         connection.query(ColorSql.queryAll,function(err,result){
             if(result){
-                data={
+                var data={
                     code:3000,
                     msg:'查询成功1',
                     length:result.length,
